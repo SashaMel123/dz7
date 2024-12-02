@@ -1,0 +1,256 @@
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.header-title {
+    font-size: 2em;
+    margin: 0;
+}
+
+.header-subtitle {
+    font-size: 1.2em;
+    margin: 5px 0 0;
+    font-weight: normal;
+}
+
+/* Бічна панель */
+aside {
+    background: #f0f0f0;
+    padding: 15px;
+    border-right: 1px solid #ddd;
+}
+
+aside h3 {
+    color: #4CAF50;
+    font-size: 1.2em;
+}
+
+aside nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside nav ul li {
+    margin: 5px 0;
+}
+
+aside nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+aside nav ul li a:hover {
+    background: #4CAF50;
+    color: white;
+}
+
+/* Основний контент */
+main {
+    padding: 20px;
+    background: #fff;
+}
+
+main h3 {
+    color: #4CAF50;
+    margin-top: 0;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Таблиця */
+.grid-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.grid-table th, .grid-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.grid-table th {
+    background: #4CAF50;
+    color: white;
+}
+
+.grid-table td {
+    background: #f9f9f9;
+}
+
+/* Цитата */
+.blockquote-style {
+    font-style: italic;
+    color: darkred;
+    border-left: 4px solid #4CAF50;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background: #f0f0f0;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Адаптивність */
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+
+    aside {
+        width: 20%;
+        min-width: 200px;
+    }
+
+    main {
+        width: 80%;
+    }
+}
+
+@media (max-width: 767px) {
+    aside {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+}
+/* Flexbox для списку навігації */
+.flex-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Вирівнює елементи рівномірно з проміжками */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.flex-container ul li {
+    margin: 5px;
+}
+
+.flex-container ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    background: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.flex-container ul li a:hover {
+    background: #333;
+    transform: scale(1.1); /* Легкий зум на наведенні */
+}
+/* Grid для таблиці */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Дві колонки: одна вузька, друга ширша */
+    gap: 10px; /* Відступи між елементами */
+    margin: 20px 0;
+}
+
+.grid-header {
+    background: #4CAF50;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.grid-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+/* Grid для таблиці */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Дві колонки: одна вузька, друга ширша */
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.grid-header {
+    background: #4CAF50;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.grid-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Медіазапит для адаптивності */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Перехід на одну колонку */
+    }
+
+    .grid-header, .grid-item {
+        text-align: center; /* Центруємо текст для мобільних */
+    }
+}
+/* Стиль для посилань у бічній панелі */
+aside nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    background: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+/* Ефект наведення */
+aside nav ul li a:hover {
+    background: #333; /* Зміна кольору фону */
+    transform: scale(1.1); /* Легкий зум */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Додаємо тінь */
+}
+
+
+
+
+
+
+
+
+
