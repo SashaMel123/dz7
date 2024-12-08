@@ -245,7 +245,57 @@ aside nav ul li a:hover {
     transform: scale(1.1); /* Легкий зум */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Додаємо тінь */
 }
+/* Стиль для бургер-меню */
+.burger-menu {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    width: 50px;
+    transition: background-color 0.3s;
+}
 
+.burger-menu:hover {
+    background: #333;
+}
+
+/* Сховане меню за замовчуванням */
+.burger-checkbox {
+    display: none; /* Приховуємо чекбокс */
+}
+
+.anekdote-nav {
+    display: none;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.anekdote-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.anekdote-nav ul li {
+    margin: 5px 0;
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Відображення меню при активації чекбоксу */
+.burger-checkbox:checked ~ .anekdote-nav {
+    display: block;
+}
 
 
 
